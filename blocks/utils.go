@@ -39,9 +39,7 @@ func decode(r BMsg, rule interface{}) {
 	// why don't we call this setRule?
 	err := mapstructure.Decode(r.Msg, rule)
 	if err != nil {
-		log.Println(r.Msg)
-		log.Println("could not decode msg into rule")
-		log.Println(err.Error())
+        log.Printf("could not decode msg into rule: %s: %v", err.Error(), r.Msg)
 	}
 }
 

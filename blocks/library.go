@@ -168,6 +168,11 @@ func BuildLibrary() {
 			RouteNames: []string{"set_rule", "get_rule"},
 			Routine:    LinearModel,
 		},
+		&BlockTemplate{
+			BlockType:  "hll",
+			RouteNames: []string{"set_rule", "get_rule", "cardinality"},
+			Routine:    HLL,
+		},
 	}
 
 	libraryList := []map[string]interface{}{}

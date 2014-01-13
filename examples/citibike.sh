@@ -1,4 +1,4 @@
-curl "localhost:7070/create?blockType=get&id=citibike"
+curl "localhost:7070/create?blockType=getHTTP&id=citibike"
 curl localhost:7070/blocks/citibike/set_rule -d '{"Endpoint":"http://citibikenyc.com/stations/json"}'
 curl "localhost:7070/create?blockType=ticker&id=t"
 curl localhost:7070/blocks/t/set_rule -d '{"Period":4}'
